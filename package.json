@@ -1,0 +1,22 @@
+{
+  "name": "iso3166-codes",
+  "version": "1.0.0",
+  "description": "ISO 3166-1 country codes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omkartapale/iso3166-codes.git"
+  },
+  "keywords": [
+    "iso-3166-1"
+  ],
+  "author": "Omkar Tapale <omkartapale@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omkartapale/iso3166-codes/issues"
+  },
+  "homepage": "https://github.com/omkartapale/iso3166-codes#readme"
+}
