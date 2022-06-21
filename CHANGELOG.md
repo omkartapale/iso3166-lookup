@@ -7,3 +7,8 @@ This is the first release by [@omkartapale](https://github.com/omkartapale). Buy
 
 ### Intial Release
 - Completed first version with basic features
+  - `getAllCountries()`,
+  - `findCountry()`,
+  - `findAlpha2()`,
+  - `findAlpha3()`,
+  - `findNum3()`
