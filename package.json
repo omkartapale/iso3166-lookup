@@ -2,21 +2,45 @@
   "name": "iso3166-codes",
   "version": "1.0.0",
   "description": "ISO 3166-1 country codes",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf dist",
+    "pretest": "npm run build",
+    "test": "mocha -r ts-node/register test/test.ts",
+    "build": "npm run clean && tsc",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omkartapale/iso3166-codes.git"
   },
   "keywords": [
-    "iso-3166-1"
+    "ISO 3166-1",
+    "country codes",
+    "alpha-2",
+    "alpha-3",
+    "num-3",
+    "country numeric codes",
+    "ISO 3166"
   ],
   "author": "Omkar Tapale <omkartapale@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/omkartapale/iso3166-codes/issues"
   },
-  "homepage": "https://github.com/omkartapale/iso3166-codes#readme"
+  "homepage": "https://github.com/omkartapale/iso3166-codes#readme",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/omkartapale"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  }
 }
