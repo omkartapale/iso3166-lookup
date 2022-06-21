@@ -1,4 +1,4 @@
-# iso3166-codes
+# iso3166-lookup
 
 ISO 3166-1:2020 country and codes lookup. The supported country code types are alpha-2, alpha-3 and num-3.
 
@@ -6,17 +6,17 @@ ISO 3166-1:2020 country and codes lookup. The supported country code types are a
 
 Install using npm
 ```bash
-npm install iso3166-codes
+npm install iso3166-lookup
 ```
 
 ## Usage
-**Using ISO 3166-1:2020 Codes package into your code** ```(import / require)```
+**Using ISO 3166-1:2020 Codes lookup package into your code** ```(import / require)```
 ```javascript
-import countries from "iso3166-codes";
+import countries from "iso3166-lookup";
 ```
 OR
 ```javascript
-const countries = require('iso3166-codes');
+const countries = require('iso3166-lookup');
 ```
 
 **Get all countries**

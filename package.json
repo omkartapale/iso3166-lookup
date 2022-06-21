@@ -1,7 +1,7 @@
 {
-  "name": "iso3166-codes",
+  "name": "iso3166-lookup",
   "version": "1.0.0",
-  "description": "ISO 3166-1 country codes",
+  "description": "ISO 3166-1:2020 country and codes lookup. The supported country code types are alpha-2, alpha-3 and num-3.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/omkartapale/iso3166-codes.git"
+    "url": "git+https://github.com/omkartapale/iso3166-lookup.git"
   },
   "keywords": [
     "ISO 3166-1",
@@ -22,14 +22,15 @@
     "alpha-3",
     "num-3",
     "country numeric codes",
-    "ISO 3166"
+    "ISO 3166",
+    "country code lookup"
   ],
   "author": "Omkar Tapale <omkartapale@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/omkartapale/iso3166-codes/issues"
+    "url": "https://github.com/omkartapale/iso3166-lookup/issues"
   },
-  "homepage": "https://github.com/omkartapale/iso3166-codes#readme",
+  "homepage": "https://github.com/omkartapale/iso3166-lookup#readme",
   "funding": {
     "type": "github",
     "url": "https://github.com/sponsors/omkartapale"
