@@ -24,7 +24,7 @@ describe("Tests for ISO-3166-1 lookup features", function () {
     });
 
     it("returns undefined if country not found with alpha-3", function () {
-      const country = iso3166Lookup.findAlpha2("xxx");
+      const country = iso3166Lookup.findAlpha3("xxx");
 
       expect(country).to.be.equal(undefined);
     });
