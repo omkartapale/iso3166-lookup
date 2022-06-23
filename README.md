@@ -12,16 +12,16 @@ npm install iso3166-lookup
 ## Usage
 **Using ISO 3166-1:2020 Codes lookup package into your code** ```(import / require)```
 ```javascript
-import countries from "iso3166-lookup";
+import iso3166Lookup from "iso3166-lookup";
 ```
 OR
 ```javascript
-const countries = require('iso3166-lookup');
+const iso3166Lookup = require('iso3166-lookup');
 ```
 
 **Get all countries**
 ```javascript
-console.log(countries.getAllCountries());
+console.log(iso3166Lookup.getAllCountries());
 /** Returns:
   [
     {
@@ -42,7 +42,7 @@ console.log(countries.getAllCountries());
 
 **Find country by country name**
 ```javascript
-console.log(countries.findCountry('India'));
+console.log(iso3166Lookup.findCountry('India'));
 /** Returns:
   {
     country: 'India',
@@ -55,7 +55,7 @@ console.log(countries.findCountry('India'));
 
 **Find country by ISO 3166-1 Alpha-2**
 ```javascript
-console.log(countries.findAlpha2('in'));
+console.log(iso3166Lookup.findAlpha2('in'));
 /** Returns:
   {
     country: 'India',
@@ -68,7 +68,7 @@ console.log(countries.findAlpha2('in'));
 
 **Find country by ISO 3166-1 Alpha-3**
 ```javascript
-console.log(countries.findAlpha3('ind'));
+console.log(iso3166Lookup.findAlpha3('ind'));
 /** Returns:
   {
     country: 'India',
@@ -81,7 +81,7 @@ console.log(countries.findAlpha3('ind'));
 
 **Find country by ISO 3166-1 Num-3 (Numeric)**
 ```javascript
-console.log(countries.findNum3(356));
+console.log(iso3166Lookup.findNum3(356));
 /** Returns:
   {
     country: 'India',
