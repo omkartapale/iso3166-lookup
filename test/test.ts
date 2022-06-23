@@ -1,36 +1,36 @@
 import { expect } from "chai";
 import { describe, it } from "mocha";
-import iso from "../dist/";
+import iso3166Lookup from "../dist/";
 import countries from "../dist/countries";
 
 describe("Tests for ISO-3166-1 lookup features", function () {
   describe("Get all from list", function () {
     it("returns an array of all countries", function () {
-      expect(iso.getAllCountries()).to.be.equal(countries);
+      expect(iso3166Lookup.getAllCountries()).to.be.equal(countries);
     });
   });
 
   describe("Not existing countries", function () {
     it("returns undefined if country not found with country name", function () {
-      const country = iso.findCountry("Unknown");
+      const country = iso3166Lookup.findCountry("Unknown");
 
       expect(country).to.be.equal(undefined);
     });
 
     it("returns undefined if country not found with alpha-2", function () {
-      const country = iso.findAlpha2("xx");
+      const country = iso3166Lookup.findAlpha2("xx");
 
       expect(country).to.be.equal(undefined);
     });
 
     it("returns undefined if country not found with alpha-3", function () {
-      const country = iso.findAlpha2("xxx");
+      const country = iso3166Lookup.findAlpha2("xxx");
 
       expect(country).to.be.equal(undefined);
     });
 
     it("returns undefined if country not found with num-3", function () {
-      const country = iso.findNum3("999");
+      const country = iso3166Lookup.findNum3("999");
 
       expect(country).to.be.equal(undefined);
     });
@@ -38,7 +38,7 @@ describe("Tests for ISO-3166-1 lookup features", function () {
 
   describe("Supplying country name as param", function () {
     it("returns a country by country name with uppercase letters", function () {
-      const country = iso.findCountry("INDIA");
+      const country = iso3166Lookup.findCountry("INDIA");
 
       expect(country).to.have.deep.property("country", "India");
       expect(country).to.have.deep.property("alpha2", "IN");
@@ -47,7 +47,7 @@ describe("Tests for ISO-3166-1 lookup features", function () {
     });
 
     it("returns a country by country name with lowercase letters", function () {
-      const country = iso.findCountry("norway");
+      const country = iso3166Lookup.findCountry("norway");
 
       expect(country).to.have.deep.property("country", "Norway");
       expect(country).to.have.deep.property("alpha2", "NO");
@@ -58,7 +58,7 @@ describe("Tests for ISO-3166-1 lookup features", function () {
 
   describe("Supplying alpha-2 as param", function () {
     it("returns a country by alpha-2 with lowercase letters", function () {
-      const country = iso.findAlpha2("ax");
+      const country = iso3166Lookup.findAlpha2("ax");
 
       expect(country).to.have.deep.property("country", "Åland Islands");
       expect(country).to.have.deep.property("alpha2", "AX");
@@ -67,7 +67,7 @@ describe("Tests for ISO-3166-1 lookup features", function () {
     });
 
     it("returns a country by alpha-2 with uppercase letters", function () {
-      const country = iso.findAlpha2("BA");
+      const country = iso3166Lookup.findAlpha2("BA");
 
       expect(country).to.have.deep.property(
         "country",
@@ -81,7 +81,7 @@ describe("Tests for ISO-3166-1 lookup features", function () {
 
   describe("Supplying alpha-3 as param", function () {
     it("returns a country by alpha-3 with lowercase letters", function () {
-      const country = iso.findAlpha3("asm");
+      const country = iso3166Lookup.findAlpha3("asm");
 
       expect(country).to.have.deep.property("country", "American Samoa");
       expect(country).to.have.deep.property("alpha2", "AS");
@@ -90,7 +90,7 @@ describe("Tests for ISO-3166-1 lookup features", function () {
     });
 
     it("returns a country by alpha-3 with uppercase letters", function () {
-      const country = iso.findAlpha3("ATG");
+      const country = iso3166Lookup.findAlpha3("ATG");
 
       expect(country).to.have.deep.property("country", "Antigua and Barbuda");
       expect(country).to.have.deep.property("alpha2", "AG");
@@ -101,7 +101,7 @@ describe("Tests for ISO-3166-1 lookup features", function () {
 
   describe("Supplying num-3 as param", function () {
     it("returns a country by num-3 (integer)", function () {
-      const country = iso.findNum3(616);
+      const country = iso3166Lookup.findNum3(616);
 
       expect(country).to.have.deep.property("country", "Poland");
       expect(country).to.have.deep.property("alpha2", "PL");
@@ -110,7 +110,7 @@ describe("Tests for ISO-3166-1 lookup features", function () {
     });
 
     it("returns a country by num-3 (string)", function () {
-      const country = iso.findNum3("036");
+      const country = iso3166Lookup.findNum3("036");
 
       expect(country).to.have.deep.property("country", "Australia");
       expect(country).to.have.deep.property("alpha2", "AU");
