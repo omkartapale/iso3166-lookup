@@ -40,7 +40,37 @@ console.log(iso3166Lookup.getAllCountries());
 */
 ```
 
-**Find country by country name**
+**Get all Country Names**
+```javascript
+console.log(iso3166Lookup.getAllCountryNames());
+/** Returns:
+  [
+    "Andorra", "United Arab Emirates",...
+  ]
+*/
+```
+
+**Get all Alpha-2 Codes**
+```javascript
+console.log(iso3166Lookup.getAllAlpha2());
+/** Returns:
+  [
+    "AD", "AE",...
+  ]
+*/
+```
+
+**Get all Alpha-3 Codes**
+```javascript
+console.log(iso3166Lookup.getAllAlpha2());
+/** Returns:
+  [
+    "AND", "ARE",...
+  ]
+*/
+```
+
+**Find country details by country name**
 ```javascript
 console.log(iso3166Lookup.findCountry('India'));
 /** Returns:
@@ -53,7 +83,7 @@ console.log(iso3166Lookup.findCountry('India'));
 */
 ```
 
-**Find country by ISO 3166-1 Alpha-2**
+**Find country details by ISO 3166-1 Alpha-2**
 ```javascript
 console.log(iso3166Lookup.findAlpha2('in'));
 /** Returns:
@@ -66,7 +96,7 @@ console.log(iso3166Lookup.findAlpha2('in'));
 */
 ```
 
-**Find country by ISO 3166-1 Alpha-3**
+**Find country details by ISO 3166-1 Alpha-3**
 ```javascript
 console.log(iso3166Lookup.findAlpha3('ind'));
 /** Returns:
@@ -79,7 +109,7 @@ console.log(iso3166Lookup.findAlpha3('ind'));
 */
 ```
 
-**Find country by ISO 3166-1 Num-3 (Numeric)**
+**Find country details by ISO 3166-1 Num-3 (Numeric)**
 ```javascript
 console.log(iso3166Lookup.findNum3(356));
 /** Returns:
@@ -91,6 +121,21 @@ console.log(iso3166Lookup.findNum3(356));
   }
 */
 ```
+
+**Specify Return/Output types for find functions**
+
+You can optionally pass second param to find functions (viz. - findCountry, findAlpha2, findAlpha3, findNum3) to specify desired output format. By default functions will return country object if the parameter is not supplied. You can specify any value from the following: "obj", "name", "alpha2", "alpha3", "num3".
+
+For example you can specify "name" to recieve output Country name as string or can specify "obj" to get Country object in return.
+```javascript
+console.log(iso3166Lookup.findCountry("india"));          // will return country object for India
+console.log(iso3166Lookup.findCountry("india", "obj"));   // will return country object for India
+console.log(iso3166Lookup.findAlpha2("in", "name"));      // will return "India"
+console.log(iso3166Lookup.findAlpha3("ind", "alpha2"));   // will return "IN"
+console.log(iso3166Lookup.findNum3(356, "alpha3"));       // will return "IND"
+console.log(iso3166Lookup.findCountry("india", "num3"));  // will return "356"
+```
+
 
 ## References:
 
