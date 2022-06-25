@@ -62,7 +62,7 @@ console.log(iso3166Lookup.getAllAlpha2());
 
 **Get all Alpha-3 Codes**
 ```javascript
-console.log(iso3166Lookup.getAllAlpha2());
+console.log(iso3166Lookup.getAllAlpha3());
 /** Returns:
   [
     "AND", "ARE",...
