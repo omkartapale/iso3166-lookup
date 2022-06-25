@@ -5,8 +5,23 @@ import countries from "../dist/countries";
 
 describe("Tests for ISO-3166-1 lookup features", function () {
   describe("Get all from list", function () {
-    it("returns an array of all countries", function () {
+    it("returns an array of all country objects", function () {
       expect(iso3166Lookup.getAllCountries()).to.be.equal(countries);
+    });
+    it("returns an array of all country names", function () {
+      expect(iso3166Lookup.getAllCountryNames()).to.be.deep.equal(
+        countries.map((c) => c.country)
+      );
+    });
+    it("returns an array of Alpha2 codes for all countries", function () {
+      expect(iso3166Lookup.getAllAlpha2()).to.be.deep.equal(
+        countries.map((c) => c.alpha2)
+      );
+    });
+    it("returns an array of Alpha3 codes for all countries", function () {
+      expect(iso3166Lookup.getAllAlpha3()).to.be.deep.equal(
+        countries.map((c) => c.alpha3)
+      );
     });
   });
 

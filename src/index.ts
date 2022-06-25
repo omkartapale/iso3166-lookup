@@ -8,6 +8,28 @@ import countries, { Country } from "./countries";
 export const getAllCountries = (): Country[] => countries;
 
 /**
+ * Get all Country Names
+ *
+ * @returns {Array<String>}
+ */
+export const getAllCountryNames = (): Array<String> =>
+  countries.map((c) => c.country);
+
+/**
+ * Get all Alpha2 Codes
+ *
+ * @returns {Array<String>}
+ */
+export const getAllAlpha2 = (): Array<String> => countries.map((c) => c.alpha2);
+
+/**
+ * Get all Alpha3 Codes
+ *
+ * @returns {Array<String>}
+ */
+export const getAllAlpha3 = (): Array<String> => countries.map((c) => c.alpha3);
+
+/**
  * Find country by country name
  *
  * @param {string} name
@@ -51,6 +73,9 @@ export const findNum3 = (num3: string | number): Country | undefined => {
 
 export default {
   getAllCountries,
+  getAllCountryNames,
+  getAllAlpha2,
+  getAllAlpha3,
   findCountry,
   findAlpha2,
   findAlpha3,
