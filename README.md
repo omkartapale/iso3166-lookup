@@ -3,6 +3,7 @@
 [![npm](https://img.shields.io/npm/v/iso3166-lookup?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/iso3166-lookup)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/iso3166-lookup?color=green&style=for-the-badge)](https://www.npmjs.com/package/iso3166-lookup)
 [![npm](https://img.shields.io/npm/dw/iso3166-lookup?style=for-the-badge)](https://www.npmjs.com/package/iso3166-lookup)
+[![Featured on Openbase](https://badges.openbase.com/js/featured/iso3166-lookup.svg?style=openbase&token=oRzUsjk42Z3rtbDlTdTO3okmW8iZUdZElFRdz/VcjxE=)](https://openbase.com/js/iso3166-lookup?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge)
 
 ISO 3166-1:2020 country and codes lookup. The supported country code types are alpha-2, alpha-3 and num-3.
 
