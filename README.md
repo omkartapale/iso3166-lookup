@@ -1,4 +1,8 @@
-# iso3166-lookup
+# ISO3166-Lookup
+
+[![npm](https://img.shields.io/npm/v/iso3166-lookup?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/iso3166-lookup)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/iso3166-lookup?color=green&style=for-the-badge)](https://www.npmjs.com/package/iso3166-lookup)
+[![npm](https://img.shields.io/npm/dw/iso3166-lookup?style=for-the-badge)](https://www.npmjs.com/package/iso3166-lookup)
 
 ISO 3166-1:2020 country and codes lookup. The supported country code types are alpha-2, alpha-3 and num-3.
 
@@ -18,6 +22,8 @@ OR
 ```javascript
 const iso3166Lookup = require('iso3166-lookup');
 ```
+
+### Get the list
 
 **Get all countries**
 ```javascript
@@ -69,6 +75,8 @@ console.log(iso3166Lookup.getAllAlpha3());
   ]
 */
 ```
+
+### Lookup country details
 
 **Find country details by country name**
 ```javascript
@@ -122,6 +130,8 @@ console.log(iso3166Lookup.findNum3(356));
 */
 ```
 
+### Additional features
+
 **Specify Return/Output types for find functions**
 
 You can optionally pass second param to find functions (viz. - findCountry, findAlpha2, findAlpha3, findNum3) to specify desired output format. By default functions will return country object if the parameter is not supplied. You can specify any value from the following: "obj", "name", "alpha2", "alpha3", "num3".
@@ -145,6 +155,7 @@ You can check following links for more information:
 - [ISO:3166-1](https://en.wikipedia.org/wiki/ISO_3166-1)
 - [ISO:639](https://en.wikipedia.org/wiki/ISO_639)
 
-### License
-[MIT License](https://github.com/omkartapale/iso3166-codes/blob/main/LICENSE)
+## License
+[![GitHub license](https://img.shields.io/github/license/omkartapale/iso3166-lookup?style=for-the-badge)](https://github.com/omkartapale/iso3166-lookup/blob/main/LICENSE)
+
 Copyright (c) 2022 Omkar Tapale
